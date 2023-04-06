@@ -13,4 +13,4 @@ jobs:
           node-version: "14.x"      
       - run: lerna exec --concurrency 1 -- npx semantic-release -e semantic-release-monorepo        
         env:          
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}          
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}          
