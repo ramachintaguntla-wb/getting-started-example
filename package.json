@@ -8,6 +8,6 @@
     "lerna": "^6.0.1"
   },
   "scripts": {
-    "release": "lerna exec --concurrency 1 -- npx semantic-release -e semantic-release-monorepo"
+    "release": "lerna exec --concurrency 1 -- npx --no-install semantic-release -e semantic-release-monorepo "
   }
 }
