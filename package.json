@@ -5,10 +5,12 @@
     "packages/*"
   ],
   "devDependencies": {
-    "lerna": "^6.0.1"
+    "lerna": "^6.0.1",
+    "semantic-release": "^18.0.1",
+    "semantic-release-monorepo": "^7.0.5"
   },
   "scripts": {
     "release": "lerna exec --concurrency 1 -- npx --no-install semantic-release -e semantic-release-monorepo ",
-    "install" : "lerna exec --concurrency 1 -- npm install"
+    "install": "lerna exec --concurrency 1 -- npm install"
   }
 }
