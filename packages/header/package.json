@@ -20,6 +20,27 @@
     "typescript": "^4.5.2"
   },
   "devDependencies": {
-    "rimraf": "^3.0.2"
-  }
+    "rimraf": "^3.0.2",
+    "semantic-release": "^18.0.1",
+    "semantic-release-monorepo": "^7.0.5"
+  },
+  "plugins": [    
+"@semantic-release/commit-analyzer",    
+"@semantic-release/release-notes-generator",   
+ "@semantic-release/changelog",    
+    { "changelogFile": "CHANGELOG.md"    },    
+ "@semantic-release/npm",    
+ ["@semantic-release/git",      
+ {"assets": ["CHANGELOG.md"]      
+ }    
+ ]  
+ ],  
+ "release": { 
+    "branches": ["master", "testlernanew"],    
+    "repositoryUrl": "https://github.com/ramachintaguntla-wb/getting-started-example",    
+    "verifyConditions": ["@semantic-release/github"],    
+    "publish": "@semantic-release/github",    
+    "fail": false,    
+    "success": false  
+    }
 }
