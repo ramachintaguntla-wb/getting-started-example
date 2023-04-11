@@ -13,5 +13,4 @@ jobs:
           node-version: "18.x" 
       - run:  npm i         
       - run: lerna exec --concurrency 1 -- npx semantic-release -e semantic-release-monorepo         
-        env:          
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}          
+               
