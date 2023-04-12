@@ -8,8 +8,7 @@ jobs:
       contents: read
       pages: write
       id-token: write 
-      env:          
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }} 
+    
     name: Release    
     runs-on: ubuntu-latest    
     steps:      
@@ -17,6 +16,8 @@ jobs:
       - uses: actions/setup-node@v1        
         with:          
           node-version: "18.x" 
+        env:          
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }} 
       - run:  npm i         
       - run: lerna exec --concurrency 1 -- npx semantic-release -e semantic-release-monorepo   
             
